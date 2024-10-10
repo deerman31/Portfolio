@@ -7,35 +7,11 @@ vars:
 silent: true
 
 tasks:
-  start:
+  dev:
     cmds:
-      - echo -e "{{.COLOR}}BUILD{{.RESET}}"
-      - deno task start
+      - echo -e "{{.COLOR}}DEV{{.RESET}}"
+      - npx next dev
 
-  check:
-    cmds:
-      - echo -e "{{.COLOR}}CHECK{{.RESET}}"
-      - deno task check
-
-  update:
-    cmds:
-      - echo -e "{{.COLOR}}UPGRADE{{.RESET}}"
-      - deno task update
-
-  fmt:
-    cmds:
-      - echo -e "{{.COLOR}}FORMAT{{.RESET}}"
-      - deno fmt
-
-  lint:
-    cmds:
-      - echo -e "{{.COLOR}}LINT{{.RESET}}"
-      - deno lint
-  
-    
   default:
     cmds:
-      - task: update
-      - task: lint
-      - task: fmt
-      - task: start
+      - task: dev
