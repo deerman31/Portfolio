@@ -1,0 +1,106 @@
+/* Header.module.css */
+
+/* ヘッダー全体のスタイル
+   - フレックスボックスレイアウトを使用して子要素を効率的に配置
+   - 半透明の薄緑色の背景で爽やかさを演出
+   - backdrop-filterでモダンなガラス効果を追加
+   - stickyポジションで画面上部に固定し、スクロール時も常に表示
+   - 緑がかった影で立体感を出しつつ全体の色調を統一
+   - transitionで各プロパティの変更をスムーズに */
+   .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: rgba(240, 255, 240, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 128, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* ロゴのスタイル
+     - 大きめのフォントサイズで目立たせる
+     - 太字と濃い緑色で重要性を強調
+     - letter-spacingをマイナスにしてモダンな印象に */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2e8b57;
+    letter-spacing: -1px;
+  }
+  
+  /* ナビゲーションメニュー全体のスタイル
+     - フレックスボックスで項目を横並びに
+     - gapプロパティで項目間の間隔を均等に設定 */
+  .nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  /* ナビゲーションリンクのスタイル
+     - テキストを大文字に変換し、統一感を出す
+     - letter-spacingで読みやすさを向上
+     - positionをrelativeに設定し、疑似要素の基準位置に
+     - transitionで色の変更をスムーズに */
+  .navLink {
+    text-decoration: none;
+    color: #3cb371;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* ナビゲーションリンクのホバー時の下線エフェクト
+     - contentを空にして表示する要素を作成
+     - 絶対位置指定で.navLinkの下端に配置
+     - 初期状態では幅0で非表示
+     - ライムグリーンの色で視覚的なアクセントを付ける
+     - transitionで幅の変更をアニメーション化 */
+  .navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #32cd32;
+    transition: width 0.3s ease;
+  }
+  
+  /* ナビゲーションリンクのホバー時の色変更
+     - ダークグリーンに変更してコントラストを強める */
+  .navLink:hover {
+    color: #006400;
+  }
+  
+  /* ホバー時の下線アニメーション
+     - 幅を100%に拡大して下線を表示 */
+  .navLink:hover::after {
+    width: 100%;
+  }
+  
+  /* レスポンシブデザイン（モバイル対応）
+     - 768px以下の画面幅でスタイルを調整
+     - ヘッダーのパディングを縮小してコンパクトに
+     - ナビゲーション項目の間隔を狭めて配置を最適化
+     - リンクのフォントサイズを小さくして見やすく調整 */
+  @media (max-width: 768px) {
+    .header {
+      padding: 1rem 5%;
+    }
+  
+    .nav {
+      gap: 1.5rem;
+    }
+  
+    .navLink {
+      font-size: 0.9rem;
+    }
+  }
