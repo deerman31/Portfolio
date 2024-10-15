@@ -105,7 +105,7 @@ export default function AboutPage() {
                 <SiCplusplus /> C++
               </li>
               <li>
-                <SiGo /> Golang
+                <SiGo /> Go
               </li>
               <li>
                 <SiPython /> Python
@@ -133,7 +133,7 @@ export default function AboutPage() {
             <h3>Infrastructure</h3>
             <ul className={styles.skillList}>
               <li>
-                <SiMysql /> Mysql
+                <SiMysql /> MySQL
               </li>
               <li>
                 <SiPostgresql /> PostgreSQL
