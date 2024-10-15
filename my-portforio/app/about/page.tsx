@@ -10,6 +10,7 @@ import {
 import {
   SiC,
   SiCplusplus,
+  SiGo,
   SiDjango,
   SiDocker,
   SiJavascript,
@@ -18,6 +19,7 @@ import {
   SiPostgresql,
   SiPython,
   SiTypescript,
+  SiMysql,
 } from "react-icons/si";
 
 export default function AboutPage() {
@@ -103,6 +105,9 @@ export default function AboutPage() {
                 <SiCplusplus /> C++
               </li>
               <li>
+                <SiGo /> Golang
+              </li>
+              <li>
                 <SiPython /> Python
               </li>
               <li>
@@ -127,6 +132,9 @@ export default function AboutPage() {
           <div className={styles.skillCategory}>
             <h3>Infrastructure</h3>
             <ul className={styles.skillList}>
+              <li>
+                <SiMysql /> Mysql
+              </li>
               <li>
                 <SiPostgresql /> PostgreSQL
               </li>
