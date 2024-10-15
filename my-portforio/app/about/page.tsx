@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className={styles.timelineItem}>
           <FaBriefcase className={styles.icon} />
           <div className={styles.timelineContent}>
-            <h3>2020~2022年</h3>
+            <h3>2020 ~ 2022年</h3>
             <p>
               帯広で社会人としてのキャリアをスタート。コロナ禍の混乱の中、貴重な経験を積む。
             </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className={styles.timelineItem}>
           <FaCode className={styles.icon} />
           <div className={styles.timelineContent}>
-            <h3>2023~ 現在</h3>
+            <h3>2023 ~ 現在</h3>
             <p>
               42Tokyoで新たな挑戦。奇跡的な合格を経て、プログラミングの世界に入る。
             </p>
