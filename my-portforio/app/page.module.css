@@ -20,6 +20,8 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 3rem;
   transition: transform 0.3s ease;
+
+  color: #000000;
 }
 
 .content:hover {
